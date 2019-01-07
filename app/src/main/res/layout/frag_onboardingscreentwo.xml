@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/whole"
+    android:background="#0dd1c5">
+
+
+    <ImageView
+        android:id="@+id/onbording_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:background="@drawable/onbordingpagetwo"
+       />
+
+
+    <TextView
+        android:id="@+id/textSplashHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/onBoardingOne_txtHeader_dim"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:text="Features of Case Watch System"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/textSplashDetails"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text=" * Track Case Status\n * View Judgment\n * View Daily Cause Lists \n * View your cases\n * Search cases using\n   Appellant, advocate, LCO number etc"
+        android:textSize="15sp"
+        android:gravity="left"
+        android:padding="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@android:color/white"
+       android:layout_below="@+id/onbording_img" />
+
+</RelativeLayout>

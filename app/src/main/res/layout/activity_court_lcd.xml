@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/activity_main_swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/court_lcd_main_row_head"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1sp"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:text="COURT HALL"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/court_lcd_text_head"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1sp"
+                        android:layout_marginTop="1sp"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:text="LIST"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/court_lcd_text_head"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1sp"
+                        android:layout_marginLeft="1sp"
+                        android:layout_marginTop="1sp"
+                        android:layout_weight="1.2"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:text="SL.NO"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/court_lcd_text_head"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1sp"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:text="CASE NUMBER"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/court_lcd_text_head"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <cms.co.in.kat.customview.demono.AutoScrollViewPager
+                    android:id="@+id/viewPager_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/head"
+                    android:layout_weight="1"
+                    app:cycle="false"
+                    app:slideDuration="@integer/lcd_slide_duration"
+                    app:slideInterval="@integer/court_lcd_main_inerval"
+                    app:stopWhenTouch="true" />
+
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/head_nxt_hearing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:background="@color/blue_dark_cs"
+                    android:gravity="center"
+                    android:text="Next Hearing date "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/court_lcd_text_head"
+                    android:textStyle="bold" />
+
+                <cms.co.in.kat.customview.demono.AutoScrollViewPager
+                    android:id="@+id/viewPager_nxt_hearing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/head"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/court_lcd_text_head"
+                    app:slideDirection="right"
+                    app:slideDuration="@integer/lcd_slide_duration"
+                    app:slideInterval="@integer/court_lcd_next_inerval"
+                    app:stopWhenTouch="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/head_pass_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:background="@color/blue_dark_cs"
+                    android:gravity="center"
+                    android:text="Passed Over Cases"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/court_lcd_text_head"
+                    android:textStyle="bold" />
+
+                <cms.co.in.kat.customview.demono.AutoScrollViewPager
+                    android:id="@+id/viewPager_pass_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/head"
+                    android:layout_weight="1"
+                    app:slideDirection="right"
+                    app:slideDuration="@integer/lcd_slide_duration"
+                    app:slideInterval="@integer/court_lcd_pass_inerval"
+                    app:stopWhenTouch="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

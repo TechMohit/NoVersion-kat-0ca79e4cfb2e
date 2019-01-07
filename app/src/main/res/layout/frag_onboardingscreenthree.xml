@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/whole"
+    android:layout_height="match_parent"
+    android:background="@color/red">
+
+
+    <ImageView
+        android:id="@+id/onbording_img"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:background="@drawable/onbordingpagethree"
+       />
+
+    <TextView
+        android:id="@+id/textSplashHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/onBoardingOne_txtHeader_dim"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+        android:text="Who can use it?"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+         />
+
+    <TextView
+        android:id="@+id/textSplashDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:gravity="left"
+        android:text="The Case watch System Mobile App can be used by advocates practicing in KAT and Citizens who have their cases filed in KAT."
+        android:padding="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/onbording_img"
+        />
+
+</RelativeLayout>

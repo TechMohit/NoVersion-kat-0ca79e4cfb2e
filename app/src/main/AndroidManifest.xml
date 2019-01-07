@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cms.kat.cws">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="cms.co.in.kat.activity.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name="cms.co.in.kat.activity.SplashScreen"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- &lt;!&ndash; Allow web apps to launch Barcode Scanner by linking to http://com.cms.kat.cws/mobile. &ndash;&gt; -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW"/> -->
+            <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE"/> -->
+            <!-- <data android:scheme="http" android:host="com.cms.kat.cws" android:path="/mobile"/> -->
+            <!-- </intent-filter> -->
+            <!-- We also support a Google Product Search URL. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.google.com"
+                    android:path="/m/products/kat"
+                    android:scheme="http" />
+            </intent-filter>
+            <!-- &lt;!&ndash;&ndash;&gt; -->
+            <!-- &lt;!&ndash; Support zxing://scan/?... like iPhone app &ndash;&gt; -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="katapp"
+                    android:path="/"
+                    android:scheme="katcws" />
+            </intent-filter>
+        </activity>
+
+        <!-- Firebase Notifications -->
+        <!-- <service android:name="cms.co.in.kat.firebase.MyFirebaseMessagingService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service android:name="cms.co.in.kat.firebase.MyFirebaseInstanceIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+
+        <activity
+            android:name="cms.co.in.kat.activity.Login"
+            android:windowSoftInputMode="adjustResize" />
+
+        <receiver
+            android:name="cms.co.in.kat.recevier.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="cms.co.in.kat.recevier.SmsReceiver"
+            android:enabled="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="cms.co.in.kat.activity.Signup"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="cms.co.in.kat.activity.GuestHome"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="cms.co.in.kat.activity.CaseTrack"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/casetrack"
+                    android:scheme="http" />
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/casetrack"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cms.co.in.kat.activity.CauseList"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/causelist"
+                    android:scheme="http" />
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/causelist"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cms.co.in.kat.activity.Judgement"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/judgement"
+                    android:scheme="http" />
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/judgement"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cms.co.in.kat.activity.SittingList"
+            android:configChanges="keyboardHidden|orientation|screenLayout">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/sittinglist"
+                    android:scheme="http" />
+                <data
+                    android:host="kat.karnataka.gov.in"
+                    android:pathPattern="/sittinglist"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cms.co.in.kat.activity.LoginHome"
+            android:label="@string/title_activity_login_home"
+            android:launchMode="singleTop"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="cms.co.in.kat.activity.HearingDate"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="cms.co.in.kat.activity.Webview" />
+        <activity android:name="cms.co.in.kat.activity.SignupPre" />
+        <activity android:name="cms.co.in.kat.activity.CaseTrackHeader" />
+        <activity android:name="cms.co.in.kat.activity.CaseTrackDetails" />
+        <activity
+            android:name="cms.co.in.kat.activity.CaseList"
+            android:configChanges="keyboardHidden|orientation|screenLayout" />
+        <activity android:name="cms.co.in.kat.activity.OnBoardingActivity" />
+        <activity android:name="cms.co.in.kat.activity.TermCondition" />
+        <activity android:name="cms.co.in.kat.activity.ErrorReport" />
+        <activity
+            android:name="cms.co.in.kat.activity.CourtLcd"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="katlcd"
+                    android:path="/"
+                    android:scheme="katcws" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cms.co.in.kat.activity.DashBoardCaseList" />
+        <activity
+            android:name="cms.co.in.kat.activity.Feedback"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="cms.co.in.kat.activity.ContactUs" />
+        <activity android:name="cms.co.in.kat.activity.ChangePassword" />
+
+        <!-- For FCM -->
+        <!-- <service android:name="cms.co.in.kat.notification.MyFirebaseMessagingService" -->
+        <!-- &gt; -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service android:name="cms.co.in.kat.notification.MyFirebaseInstanceIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <activity android:name="cms.co.in.kat.activity.MyCases" />
+        <activity android:name="cms.co.in.kat.activity.CaseTrackJudDetails" />
+        <activity android:name="cms.co.in.kat.activity.Reports" />
+        <!-- <activity android:name="cms.co.in.kat.activity.ReportDetail"></activity> -->
+        <activity android:name="cms.co.in.kat.activity.CaseJudgmentInfo" />
+        <activity android:name="cms.co.in.kat.CaseListJugdment" />
+        <activity android:name="cms.co.in.kat.activity.JudgeCaseList"></activity>
+    </application>
+
+</manifest>

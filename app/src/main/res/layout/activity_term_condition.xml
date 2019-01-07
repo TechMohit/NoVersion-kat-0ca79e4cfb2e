@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/blue_light"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:transitionName="logo"
+            android:src="@drawable/app_logoo" />
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:text="Terms and Conditions"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_condition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:lineSpacingExtra="3dp"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:text="@string/term_condition"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                />
+        </ScrollView>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1.4"-->
+        <!--android:background="@drawable/card"-->
+        <!--android:orientation="vertical">-->
+        <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:checked="false"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:padding="5dp"-->
+            <!--android:text="I have read and agree to the terms and conditions"/>-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_accept"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/btn_white_on_click"-->
+            <!--android:text="Continue"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@color/colorPrimary" />-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>
+

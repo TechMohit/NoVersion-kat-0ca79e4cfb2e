@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF1744</color>
+    <color name="colorText">@color/black</color>
+    <color name="colorTextTitle">@color/colorPrimary</color>
+    <color name="colorBtnBg">@color/colorPrimary</color>
+    <color name="colorBtnText">@color/white</color>
+    <color name="green_hearing">#00c7b6</color>
+    <color name="light_white">#E0E0E0</color>
+    <color name="light_grey">#F3F3F3</color>
+
+    <color name="blue_dark_cs">#044379</color>
+    <color name="blue_light_cs">#65a2d8</color>
+    <color name="green_cs">#00c7b6</color>
+
+    <color name="rating_unselect">#abb9c5</color>
+    <color name="dashboard_per">#2caf6b</color>
+    <color name="dashboard_temp">#a200fb</color>
+    <color name="dashboard_dis">#ea5d61</color>
+    <color name="dashboard_my">#9c27b0</color>
+    <color name="dashboard_scr">#ff9800 </color>
+    <color name="dashboard_in">#ffc107</color>
+
+
+    <color name="inactive_indicator">#96bedf</color>
+    <color name="inactive_indicatorblue">#96bedf</color>
+    <color name="inactive_indicatorred">#e07b89</color>
+    <color name="inactive_indicatorgreen">#c0d983</color>
+    <color name="black_transparent">#14000000</color>
+
+    <!-- card colors -->
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow_1">#d4d4d4</color>
+    <color name="card_shadow_2">#dddddd</color>
+    <color name="card_detailing">#eee</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="blue">#1b8e99</color>
+    <color name="color_light">#37484a</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="red">#ccef5350</color>
+    <color name="demo">#C0C0C0</color>
+
+    <color name="silver">#C0C0C0</color>
+    <color name="gray">#808080</color>
+    <color name="olive">#808000</color>
+    <color name="purple">#800080</color>
+    <color name="maroon">#800000</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="lime">#00FF00</color>
+    <color name="teal">#008080</color>
+    <color name="green">#008000</color>
+    <color name="blue_light">#2196f3</color>
+    <color name="navy">#000080</color>
+    <color name="black">#000000</color>
+</resources>

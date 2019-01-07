@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select Registration type:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_citizen"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_on_click"
+        android:text="Citizen"
+        android:textColor="@color/colorBtnText"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_advocate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_on_click"
+        android:text="Advocate"
+        android:textColor="@color/colorBtnText"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_ca_or_stp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_on_click"
+        android:text="CA/STP"
+        android:textColor="@color/colorBtnText"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_companies"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_on_click"
+        android:text="Companies"
+        android:textColor="@color/colorBtnText"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_societies"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_on_click"
+        android:text="Societies"
+        android:textColor="@color/colorBtnText"
+        android:textStyle="bold" />
+
+</LinearLayout>

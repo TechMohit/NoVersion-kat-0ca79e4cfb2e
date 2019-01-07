@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_light"
+        android:orientation="horizontal"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:src="@drawable/app_logoo"
+            android:transitionName="logo" />
+
+        <TextView
+            android:id="@+id/logo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Case Track"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/tool"
+        android:background="@drawable/bg"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/expand_button"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/card"
+            android:elevation="6dp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="I know My Case Number"
+            android:textColor="@color/blue_light" />
+
+        <cms.co.in.kat.customview.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="500"
+            app:el_expanded="false"
+            app:el_parallax="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_rev"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:background="@drawable/btn_white_on_click_select"
+                    android:text="Revenue"
+                    android:textColor="@color/gray" />
+
+                <Button
+                    android:id="@+id/btn_cop"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_white_on_click_select"
+                    android:text="Cooperation"
+                    android:textSize="10sp"
+                    android:textColor="@color/gray" />
+
+                <Button
+                    android:id="@+id/btn_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:background="@drawable/btn_white_on_click_select"
+                    android:text="Sales Tax"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </cms.co.in.kat.customview.expandablelayout.ExpandableLayout>
+
+        <cms.co.in.kat.customview.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="500"
+            app:el_expanded="false"
+            app:el_parallax="0.5">
+
+            <include
+                android:id="@+id/caseSearch"
+                layout="@layout/case_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+
+        </cms.co.in.kat.customview.expandablelayout.ExpandableLayout>
+
+        <Button
+            android:id="@+id/expand_button2"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/card"
+            android:elevation="6dp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="I Don't know My Case Number"
+            android:textColor="@color/blue_light"
+            android:visibility="visible" />
+
+        <cms.co.in.kat.customview.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="500"
+            app:el_expanded="false"
+            app:el_parallax="1">
+
+            <include
+                android:id="@+id/multiCaseSearch"
+                layout="@layout/multi_case_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true" />
+
+        </cms.co.in.kat.customview.expandablelayout.ExpandableLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+</RelativeLayout>

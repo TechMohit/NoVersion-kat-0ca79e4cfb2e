@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        android:elevation="3dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tool"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Branch"
+                    android:textColor="@color/blue_light" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/sp_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Type"
+                    android:textColorHint="#05ab9a"
+                    app:met_floatingLabel="none" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Petition / Case Type "
+                    android:textColor="@color/blue_light" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/sp_case_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Type"
+                    android:textColorHint="#05ab9a"
+                    app:met_floatingLabel="none" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Section / Act"
+                    android:textColor="@color/blue_light" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/sp_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Type"
+                    android:textColorHint="#05ab9a"
+                    app:met_floatingLabel="none" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/blue_light">
+
+                </View>
+
+                    <EditText
+                        android:id="@+id/et_appellant"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:hint="Appellant Name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:text="OR"
+                    android:textColor="@color/blue_light" />
+
+
+                    <EditText
+                        android:id="@+id/et_respondent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:hint="Respondent Name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:text="OR"
+                    android:textColor="@color/blue_light" />
+
+
+                    <EditText
+                        android:id="@+id/et_advocate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:hint="Advocate Name"
+                        android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/blue_light"></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="District "
+                    android:textColor="@color/blue_light" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/sp_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Type"
+                    android:textColorHint="#05ab9a"
+                    app:met_floatingLabel="none" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Court Hall"
+                    android:textColor="@color/blue_light" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/sp_court_hall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Type"
+                    android:textColorHint="#05ab9a"
+                    app:met_floatingLabel="none" />
+
+
+                    <EditText
+                        android:id="@+id/et_lco_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:hint="LCO Number"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+
+
+                    <EditText
+                        android:id="@+id/et_lco_authority"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:hint="LCO Authority"
+                        android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Select Start Date"
+                    android:textColor="@color/blue_light" />
+
+                <TextView
+                    android:id="@+id/et_date_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:text="Click"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="Select End Date"
+                    android:textColor="@color/blue_light" />
+
+                <TextView
+                    android:id="@+id/et_date_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:text="Click"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/multi_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_white_on_click_select"
+                    android:text="Search"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

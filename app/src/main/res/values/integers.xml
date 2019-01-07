@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="txt_header">12</integer>
+    <integer name="txt_normal">9</integer>
+    <integer name="btn_height">40</integer>
+    <integer name="case_count_anim">1000</integer>
+    <integer name="paging_alpha">50</integer>
+    <integer name="lcd_slide_duration">5000</integer>
+    <integer name="court_lcd_main_inerval">9000</integer>
+    <integer name="court_lcd_next_inerval">3000</integer>
+    <integer name="court_lcd_pass_inerval">5000</integer>
+
+</resources>
